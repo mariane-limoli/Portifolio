@@ -189,15 +189,15 @@ section {
     position: absolute;
     top: 0;
     left: 0;
-    width: 0;
-    height: 100%;
+    width: 100%;
+    height: 0;
     background: var(--bg-color);
     z-index: -1;
     transition: .5s;
 }
 
 .btn-box .btn:hover::before {
-    width: 100%;
+    height: 100%;
 }
 
 .home-sci {
@@ -234,8 +234,8 @@ section {
     position: absolute;
     top: 0;
     left: 0;
-    width: 0;
-    height: 100%;
+    width: 100%;
+    height: 0;
     background-color: var(--main-color);
     z-index: -1;
     transition: .5s;
@@ -243,7 +243,7 @@ section {
 }
 
 .home-sci a:hover::before {
-    width: 100%;
+    height: 100%;
 }
 
 .home-imgHover {
@@ -392,15 +392,15 @@ span {
     position: absolute;
     top: 0;
     left: 0;
-    width: 0;
-    height: 100%;
+    width: 100%;
+    height: 0;
     background: var(--second-bg-color);
     z-index: -1;
     transition: .5s;
 }
 
 .education-content .content:hover::before {
-    width: 100%;
+    height: 100%;
 }
 
 .education-content .content .year {
@@ -457,15 +457,15 @@ span {
     position: absolute;
     top: 0;
     left: 0;
-    width: 0;
-    height: 100%;
+    width: 100%;
+    height: 0;
     background: var(--bg-color);
     z-index: -1;
     transition: .5s;
 }
 
 .skills-box .skills-content:hover ::before {
-    width: 100%;
+    height: 100%;
 }
 
 .skills-content .progress {
