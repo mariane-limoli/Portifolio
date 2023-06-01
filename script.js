@@ -37,6 +37,22 @@ window.onscroll = () => {
   navbar.classList.remove("active");
 };
 
+const phone = document.getElementById('phone');
+
+phone.addEventListener('click', function(){
+    phone.placeholder='(xx)xxxxx-xxxx';
+});
+
+phone.addEventListener('change', verificaPhone);
+function verificaPhone(){
+    if(phone.value.length > 11){
+        phone.style.border = 'red .3rem solid'
+        alert('Número de telefone inválido, por favor digite novamente.')
+        phone.value='';
+        phone.focus();
+    } else phone.style.border = '#675af3 .2rem solid'
+}
+
 const formulario = document.getElementById("myForm");
 formulario.addEventListener("submit", function () {
   confete.style.display = "block";
