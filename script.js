@@ -36,25 +36,38 @@ window.onscroll = () => {
   menuIcon.classList.remove("bx-x");
   navbar.classList.remove("active");
 };
+//VERIFICAÇÃO DO TELEFONE
+const phone = document.getElementById("phone");
 
-const phone = document.getElementById('phone');
-
-phone.addEventListener('click', function(){
-    phone.placeholder='(xx)xxxxx-xxxx';
+phone.addEventListener("click", function () {
+  phone.placeholder = "(xx)xxxxx-xxxx";
 });
 
-phone.addEventListener('change', verificaPhone);
-function verificaPhone(){
-    if(phone.value.length > 11){
-        phone.style.border = 'red .3rem solid'
-        alert('Número de telefone inválido, por favor digite novamente.')
-        phone.value='';
-        phone.focus();
-    } else phone.style.border = '#675af3 .2rem solid'
+phone.addEventListener("change", verificaPhone);
+function verificaPhone() {
+  if (phone.value.length > 11) {
+    phone.style.border = "red .3rem solid";
+    alert("Número de telefone inválido, por favor digite novamente.");
+    phone.value = "";
+    phone.focus();
+  } else phone.style.border = "#675af3 .2rem solid";
+}
+//VERIFICAÇÃO DO E-MAIL
+const email = document.getElementsByClassName('email')[0];
+email.addEventListener('change', verificaEmail);
+function verificaEmail(){
+    if (document.forms.myForm.elements[1].value == "" ||
+      document.forms.myForm.elements[1].value.indexOf("@") == -1 ||
+      document.forms.myForm.elements[1].value.indexOf(".") == -1){
+        email.style.border = "red .3rem solid";
+    alert("Preencha campo E-MAIL corretamente!");
+    //document.forms.myForm.elements[1].focus();
+  } else email.style.border = "#675af3 .2rem solid";
 }
 
 const formulario = document.getElementById("myForm");
 formulario.addEventListener("submit", function () {
+  
   confete.style.display = "block";
   setTimeout(function () {
     // Ocultar o gif animado de confetes
